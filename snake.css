@@ -1,0 +1,56 @@
+body, #overlay{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+#viewport{
+	width: 80vh;
+	height: 80vh;
+	position: relative;
+}
+#overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+#overlay > *{
+	display: none;
+}
+#overlay.start, #overlay.gameover, #overlay.pause{
+	background-color: rgba(0,0,0,0.8);
+}
+#overlay.start .start, #overlay.gameover .gameover, #overlay.pause .pause{
+	display: block;
+}
+#overlay > * > *{
+	display: block;
+	margin:auto;
+}
+#overlay span{
+	color: white;
+}
+#score{
+	position: absolute;
+	top: 0;
+	left: 100%;
+	margin: 0 1em;
+}
+#overlay.start ~ #gameview, #overlay.gameover ~ #gameview, #overlay.pause ~ #gameview{
+	-webkit-filter : blur(5px);
+}
+table{
+	border-spacing: 1px;
+
+	border:1px solid blue;
+	width: 100%;
+	height: 100%;
+}
+td.snake{
+	background-color: blue;
+}
+td.food{
+	background-color: red;
+}

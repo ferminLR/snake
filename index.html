@@ -1,0 +1,27 @@
+<head>
+	<link href="snake.css" rel="stylesheet" type="text/css"/>
+	<script src="snake.js"></script>
+</head>
+<body>
+	<div id='viewport'>
+		<div id='overlay' class='start'>
+			<div class='start'>
+				<span>Snake</span>
+				<button onclick='Game.start();'>Start game</button>
+			</div>
+			<div class='gameover'>
+				<span>Game over</span>
+				<button onclick='Game.start();'>Start again</button>
+				<span>Final score:
+					<span id='finalScore'></span>
+				</span>
+			</div>
+			<div class='pause'>
+				<span>Pause</span>
+				<button onclick='Game.pause();'>Resume</button>
+			</div>
+		</div>
+		<div id='score'></div>
+		<div id='gameview'></div>
+	</div>
+<body>
